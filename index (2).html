@@ -1,0 +1,222 @@
+<html lang='en-US'>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="UTF-8">
+  <title>Osman Hegazy</title>
+  <!--@TODO-->
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" type="image/png" href="img/shortcut-icon.png" />
+  <link rel="apple-touch-icon" sizes="196x196" type="image/png" href="img/mobile-app-icon.png">
+  <!--@TOBEREMOVED-->
+  <link href="/3rd/smooth-scrollbar.css" rel="stylesheet"  async="true"> 
+  <!-- Hotjar Tracking Code for https://osmanhegazy.com/ -->
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:378553,hjsv:5};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PHVFCW');</script>
+  <!-- End Google Tag Manager -->
+
+  <!--@TOBEREMOVED-->  
+  <script src="/3rd/sine-waves.js" ></script>  
+  <style>
+    html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+    html, body.loding {
+      overflow: auto !important;
+      min-height: 100%;
+      height: 100%;
+    }
+
+    body.loading {
+      padding: 0;
+      margin: 0;
+      
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    #title {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      font-size: 20px;
+      letter-spacing: 0.1em;
+      z-index: 100;
+    }
+
+    
+    body.loading #loader {
+      background-color: #fff;
+      background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjNTg1ODU4Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+      background-size: 100%;
+      background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #000000), color-stop(50%, #000000), color-stop(100%, #000000));
+      background-image: -moz-linear-gradient(top, #000000 0%, #000000 50%, #000000 100%);
+      background-image: -webkit-linear-gradient(top, #000000 0%, #000000 50%, #000000 100%);
+      background-image: linear-gradient(to bottom, #000000 0%, #000000 50%, #000000 100%);
+      font-family: 'Raleway', sans-serif;
+      font-weight: 100;
+      z-index: 999;
+      display:block;
+      position: fixed;
+    /* width: 100%; */
+      color: rgba(255, 255, 255, 0.5);
+      height: 100%;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body #loader {
+      display: none;
+    }
+    #waves {
+      position: absolute;
+      z-index: 20;
+    }
+    body.loading #loader {
+      height: 100%;
+    }
+    .wrapper {
+      width: 100%;
+      position: absolute;
+      top : 0;
+      left : 0 ;
+      right : 0 ;
+      bottom : 0 ;
+      z-index : 99;
+      height: 100%;
+      margin: 0 auto;
+      text-align: center;
+      transition: width 0.3s ;
+    }
+    .wrapper .container {
+        position: relative;
+        height: 100%;
+      }
+      .wrapper .container svg {
+          position: absolute;
+          display: block;
+      }
+      .wrapper .container svg path {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 80px;
+        /* stroke-linejoin: round; */
+        /* stroke-linecap: round; */
+        /* stroke-dasharray: 1px, 15px; */
+      }
+      
+  </style>
+</head>
+<body class="loading">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PHVFCW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <div id="loader">
+    <div class="wrapper"> 
+      <div class="container">
+          <svg id="loading-border" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">  
+          </svg>
+      </div>
+    </div>
+    <!--<h1> Osman </h1>-->
+    <canvas id="waves"></canvas>
+    <script>
+      var waves = new SineWaves({
+  el: document.getElementById('waves'),
+  
+  speed: 4,
+  
+  width: function() {
+    return window.innerWidth;
+  },
+  
+  height: function() {
+    return window.innerHeight;
+  },
+  
+  ease: 'SineInOut',
+  
+  wavesWidth: '70%',
+  
+  waves: [
+    {
+      timeModifier: 4,
+      lineWidth: 1,
+      amplitude: -25,
+      wavelength: 25
+    },
+    {
+      timeModifier: 2,
+      lineWidth: 2,
+      amplitude: -50,
+      wavelength: 50
+    },
+    {
+      timeModifier: 1,
+      lineWidth: 1,
+      amplitude: -100,
+      wavelength: 100
+    },
+    {
+      timeModifier: 0.5,
+      lineWidth: 1,
+      amplitude: -200,
+      wavelength: 200
+    },
+    {
+      timeModifier: 0.25,
+      lineWidth: 2,
+      amplitude: -400,
+      wavelength: 400
+    }
+  ],
+ 
+  // Called on window resize
+  resizeEvent: function() {
+    var gradient = this.ctx.createLinearGradient(0, 0, this.width, 0);
+    gradient.addColorStop(0,"rgba(249, 142, 4, 0.2)");
+    gradient.addColorStop(0.5,"rgba(249, 142, 4, 0.5)");
+    gradient.addColorStop(1,"rgba(249, 142, 4, 0.2)");
+    
+    var index = -1;
+    var length = this.waves.length;
+	  while(++index < length){
+      this.waves[index].strokeStyle = gradient;
+    }
+    
+    // Clean Up
+    index = void 0;
+    length = void 0;
+    gradient = void 0;
+  }
+});
+    </script>
+  </div>
+  <div id="content">
+    
+  </div>
+
+  <script src="index.js" async="true"></script>
+  <script src="https://use.fontawesome.com/758dcf0891.js" async="true"></script>
+</body>
+</html>
